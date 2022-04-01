@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color: rgb(53, 53, 53);
+  min-height: 100vh;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+ul,
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+
+.Header {
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+  background-color: rgb(37, 37, 37);
+}
+
+.Header a {
+  color: #fff;
+}
+
+.Header,
+.Header nav {
+  display: flex;
+  align-items: center;
+}
+
+.Header nav a {
+  font-weight: 600;
+}
+
+.Header nav a.active {
+  color: rgb(143, 142, 139);
+}
+
+.Header nav > * + * {
+  margin-left: 2rem;
+}

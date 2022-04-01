@@ -5,7 +5,7 @@ export const Films = () => {
   return (
     <div>
       {/* Header */}
-      <Header />
+      <Header active="Films" />
       <h1>Films Page</h1>
     </div>
   );

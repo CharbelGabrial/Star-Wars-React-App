@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <div>
     {/* Header */}
-    <Header />
+    <Header active="home" />
       <h1>Home</h1>
     </div>
   );
