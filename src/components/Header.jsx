@@ -8,17 +8,17 @@ const Header = ({ active }) => {
 
       <nav>
         <li>
-          <Link to="/">
+          <Link to="/" className={`${active === "home" && "active"}`}>
             Home
           </Link>
         </li>
         <li>
-          <Link to="/Films">
+          <Link to="/Films" className={`${active === "Films" && "active"}`}>
             Films
           </Link>
         </li>
         <li>
-          <Link to="/Planets" >
+          <Link to="/Planets" className={`${active === "Planets" && "active"}`}>
             Planets
           </Link>
         </li>
