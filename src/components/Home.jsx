@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "./Header";
 
-export const Home = () => {
+const Home = () => {
   return (
     <div>
     {/* Header */}
     <Header active="home" />
+    
       <div className="home_img">
           <img
             src="https://cdn.pixabay.com/photo/2020/12/23/12/27/star-wars-5854861_1280.jpg"
@@ -21,3 +22,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;
