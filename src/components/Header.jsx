@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StarWarsLogo from "../img/StarWarsLogo.png"
+
 
 const Header = ({ active }) => {
   return (
     <div className="Header">
-      <Link to="/">StarWars Fans</Link>
+      <Link to="/"><img src={StarWarsLogo} alt="logo" /></Link>
 
       <nav>
         <li>
