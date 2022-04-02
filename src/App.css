@@ -67,15 +67,17 @@ a {
   color: #fff;
 }
 
-/* Planets*/
+/* Planets And Films*/
 
-.planets_content {
+.planets_content,
+.films_content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   padding: 5rem 6rem;
 }
-.planet {
+.planet,
+.film {
   background-color: rgb(37, 37, 37);
   padding: 2rem;
   border-radius: 20px;
@@ -85,14 +87,60 @@ a {
   align-items: center;
   justify-content: center;
 }
-.planet h1 {
+.planet h1,
+.film h1 {
   font-size: 15px;
   font-weight: 500;
   color: #fff;
 }
-.planet p {
+.planet p,
+.film p {
   font-weight: 500;
   font-size: 15px;
   color: #fff;
   margin-top: 1rem;
+}
+.film button {
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 0 10px;
+  height: 40px;
+  cursor: pointer;
+  min-width: 70% !important;
+  border-radius: 20px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 18px;
+  border: 3px solid gray;
+}
+
+/* Popup */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9;
+  display: none;
+  overflow: auto;
+}
+.popup.active {
+  display: block;
+}
+.close_icon {
+  background-color: #fff;
+  display: flex;
+  width: 40px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.close_icon img {
+  width: 60%;
 }
