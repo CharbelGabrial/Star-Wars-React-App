@@ -23,6 +23,9 @@ a {
   padding: 1.5rem 4rem;
   background-color: rgb(37, 37, 37);
 }
+.Header img {
+  width: 90px;
+}
 .Header a {
   color: #fff;
 }
