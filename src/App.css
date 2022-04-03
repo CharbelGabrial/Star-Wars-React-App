@@ -6,7 +6,7 @@
 .App {
   background-color: rgb(53, 53, 53);
   min-height: 100vh;
-  font-family: "Chakra Petch", sans-serif;
+  font-family: "Chakra Petch", sans-serif, Arial;
 }
 ul,
 nav {
@@ -57,7 +57,7 @@ a {
 .home_img img {
   width: 100%;
   height: 100vh;
-  filter: brightness(50%);
+  filter: brightness(40%);
   object-fit: cover;
 }
 .home_img h1 {
@@ -89,17 +89,20 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-shadow: inset 5px 5px 10px rgb(45, 45, 45), inset -5px -5px 10px rgb(37, 37, 37);
 }
 .planet h1,
 .film h1 {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   color: #fff;
 }
 .planet p,
 .film p {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   color: #fff;
   margin-top: 1rem;
 }
@@ -113,6 +116,7 @@ a {
   border-radius: 20px;
   font-family: "Chakra Petch", sans-serif;
   font-size: 18px;
+  font-weight: 600;
   border: 3px solid gray;
 }
 
