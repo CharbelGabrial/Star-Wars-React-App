@@ -137,8 +137,8 @@ a {
   display: flex;
   width: 40px;
   position: absolute;
-  top: 30px;
-  right: 20px;
+  top: 18px;
+  right: 18px;
   height: 40px;
   justify-content: center;
   align-items: center;
@@ -146,4 +146,32 @@ a {
 }
 .close_icon img {
   width: 60%;
+}
+
+@media screen and (max-width: 995px) {
+  .planets_content,
+  .films_content {
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 2rem;
+  }
+}
+@media screen and (max-width: 595px) {
+  .planets_content,
+  .films_content {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+  }
+}
+@media screen and (max-width: 565px) {
+  .home_img h1 {
+    width: 90%;
+    line-height: 40px;
+    font-size: 25px;
+  }
+  .Header {
+    padding: 1.5rem 1rem;
+  }
+  .Header nav > * + * {
+    margin-left: 0.7rem;
+  }
 }
