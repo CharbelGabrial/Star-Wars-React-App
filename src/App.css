@@ -147,6 +147,18 @@ a {
 .close_icon img {
   width: 60%;
 }
+.parent_loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgb(37, 37, 37, 0.9);;
+  padding: 20px 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
 
 @media screen and (max-width: 995px) {
   .planets_content,
