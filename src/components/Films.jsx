@@ -91,7 +91,7 @@ const Films = () => {
         <div className="films_content">
           {planets.map((EachCharacter) => (
             <div className="film" key={EachCharacter.name}>
-              <h1>Name: {EachCharacter.name}</h1>
+              <h1>{EachCharacter.name}</h1>
               <p>Gender: {EachCharacter.gender}</p>
               <p>Eye Color: {EachCharacter.eye_color}</p>
               <p>Hair Color: {EachCharacter.hair_color}</p>
