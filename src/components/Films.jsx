@@ -2,19 +2,20 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import { useStateValue } from "../context/StateManagement";
 import closeicon from "../img/close.png";
+import Loader from "react-js-loader";
 
 const Films = () => {
   const [films, setfilms] = useState([]);
   const [{ planets }, dispatch] = useStateValue();
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     fetch("https://swapi.dev/api/films/")
       .then((res) => res.json())
       .then((jsondata) => {
         window.localStorage.setItem("count", jsondata.count);
-
         setfilms(jsondata.results);
-        console.log(jsondata.results);
+        setLoading(true);
       })
       .catch((err) => {
         console.log(err);
@@ -65,7 +66,7 @@ const Films = () => {
     <div className="Films">
       {/* header */}
       <Header active="Films" />
-      
+      { loading ? loading : <div className="parent_loader"><Loader type="bubble-ping" title={"Loading..."} color={'#FFFFFF'} size={100} /></div>}
       <div className="films_content">
         {films.map((EachFilm) => (
           <div className="film" key={EachFilm.url}>

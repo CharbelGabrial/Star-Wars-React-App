@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
+import Loader from "react-js-loader";
 
 const Planets = () => {
   const [Planets, setPlanets] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     fetch("https://swapi.dev/api/planets/")
       .then((res) => res.json())
       .then((jsondata) => {
-        console.log(jsondata.results);
         setPlanets(jsondata.results);
+        setLoading(true);
       })
       .catch((err) => {
         console.log(err);
@@ -19,7 +21,7 @@ const Planets = () => {
     <div className="Planets">
       {/* header */}
       <Header active="Planets" />
-
+      { loading ? loading : <div className="parent_loader"><Loader type="bubble-ping" title={"Loading..."} color={'#FFFFFF'} size={100} /></div>}
       <div className="planets_content">
         {Planets.map((EachPlanet) => (
           <div className="planet" key={EachPlanet.name}>
