@@ -7,11 +7,7 @@ const Home = () => {
     {/* Header */}
     <Header active="home" />
     
-      <div className="home_img">
-          <img
-            src="https://cdn.pixabay.com/photo/2020/12/23/12/27/star-wars-5854861_1280.jpg"
-            alt=""
-          />
+      <div className="home_content">
           <h1>
             Each film opens with the static blue text, "A long time ago in a
             galaxy far, far away....", followed by the Star Wars logo shrinking in
