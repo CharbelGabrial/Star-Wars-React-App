@@ -7,7 +7,8 @@ import Loader from "react-js-loader";
 const Films = () => {
   const [films, setfilms] = useState([]);
   const [{ planets }, dispatch] = useStateValue();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://swapi.dev/api/films/")
@@ -24,6 +25,7 @@ const Films = () => {
 
   const HandlePopUp = (e, url) => {
     e.preventDefault();
+    setIsLoading(true);
     document.querySelector(".popup").classList.add("active");
 
     fetch(url)
@@ -60,6 +62,8 @@ const Films = () => {
           console.log(err);
         });
     });
+
+    setIsLoading(false);
   };
 
   return (
@@ -80,6 +84,7 @@ const Films = () => {
       </div>
 
       <div className="popup">
+      {isLoading && <div className="parent_loader"><Loader type="bubble-ping" title={"Loading..."} color={'#FFFFFF'} size={100} /></div>}
         <span
           className="close_icon"
           onClick={(e) => {
